@@ -19,4 +19,4 @@ The conditional GANs does appear to be using the edge pixes for texture, but the
 
 Our goal in the end will be to select any poro-perm combination and using ML create a representative thin section showing the texture and a capillary pressure curve. This is shown below, but we are using kNN to query the database and find the nearest data to our poro-perm combination and then show those results as in the example below:
 
->![Altair_TS](kNN_estimated_Pc_RosettaStone.png)
+>![Altair_TS](kNN_estimated_Pc_RosettaStone.gif)
