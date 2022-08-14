@@ -15,10 +15,12 @@ Our goal is to use a training image as shown below which are the thin section im
 
 >![Altair_TS](TS_results.png)
 
-The conditional GANs does appear to be using the edge pixels for texture, but there are also some process artifacts shown in the area of the black box used in the testing. We are training the data on the real images, but we use the black box image for our prediction. We want to see how well the program handles this lack of data in the black box region. Since this initial attempt, we have used augmentation to supplement our dataset, and the results are better. We have also created separate training sets by lithologic description with much better results too. This might be our final solution in the end. 
+The conditional GANs does appear to be using the edge pixels for texture, but there are also some process artifacts shown in the area of the black box used in the testing. We are training the data on the real images, but we use the black box image for our prediction. We want to see how well the program handles this black box region. Since this initial attempt, we have used augmentation to supplement our dataset, and the results are better. We have also created separate training sets by lithologic description with much better results too. This might be our final solution in the end to first provide a lithologic description before any predictions. 
 
-Our goal will be to select any poro-perm combination and using ML create a representative thin section showing the texture and a capillary pressure curve. A kNN example is shown below.  We are using kNN to query our petrophysical database to find the nearest samples to our poro-perm combination and then produce the results as in this example below:
+Our goal will be to select any poro-perm combination and using ML create a representative thin section image showing the texture and a capillary pressure curve. 
+
+A kNN example is shown below.  We are using kNN to query our petrophysical database to find the nearest samples to our poro-perm combination and then produce the results as shown in this example below:
 
 >![Altair_TS](kNN_estimated_Pc_RosettaStone.gif)
 
-Our final product might require the user to provide a lithologic description of the rock and then the program would provide an estimate.
+Our final product might require the user to provide a lithologic description of the rock first and then select the poro-perm combination where the program would provide a final prediction of a thin section image and a capillary pressure curve that is fit for that texture.
