@@ -16,3 +16,7 @@ Our goal is to use a training image as shown below which are the thin section im
 >![Altair_TS](TS_results.png)
 
 The conditional GANs does appear to be using the edge pixes for texture, but there are also some process artifacts shown in the area of the black box used in the testing. We traing the data on the real image, but use the black box image for our prediction to see how the program handles this lack of real data. Since this initial attempt, we have used augmentation to supplement our dataset, and the results are better. We have also created seperate training sets by lithologic description with much better results, and this might be our final solution in the end. 
+
+Our goal in the end will be to select any poro-perm combination and using ML create a representative thin section showing the texture and a capillary pressure curve. This is shown below, but we are using kNN to query the database and find the nearest data to our poro-perm combination and then show those results as in the example below:
+
+>![Altair_TS](kNN_estimated_Pc_RosettaStone.png)
